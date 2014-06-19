@@ -13,3 +13,11 @@ get '/' do
   @title = "Hello World"
   erb :index
 end
+
+get '/challenges/:id' do
+  erb :show
+end
+
+post '/challenges' do
+  # do something
+end
