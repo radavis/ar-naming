@@ -4,4 +4,8 @@
   <p>Wrong! The correct answer was '<%= @correct_answer %>'</p>
 <% end %>
 
+<h2>Score</h2>
+<p>Right: <%= session[:right] %></p>
+<p>Wrong: <%= session[:wrong] %></p>
+
 <a href="/challenge">Try again?</a>
