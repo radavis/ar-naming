@@ -14,10 +14,14 @@ get '/' do
   erb :index
 end
 
-get '/challenges/:id' do
-  erb :show
+get '/challenge' do
+  @challenge = Challenge.all.sample
+  erb :challenge
 end
 
-post '/challenges' do
-  # do something
+post '/challenge' do
+  @challenge = Challenge.find(params[:challenge_id])
+  @correct_answer = @challenge.table_name
+  @result = (@correct_answer == params[:answer])
+  erb :result
 end
