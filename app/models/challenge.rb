@@ -35,7 +35,7 @@ class Challenge < ActiveRecord::Base
   end
 
   def self.questions
-    [ :model_file_name, :table_name, :migration_name, :migration_file_name,
+    [ :model_file_name, :table_name, :migration_name,
       :controller_name, :controller_file_name, :views_folder_name ]
   end
 end
