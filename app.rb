@@ -16,12 +16,14 @@ end
 
 get '/challenge' do
   @challenge = Challenge.all.sample
+  @question = Challenge.questions.sample.to_s
   erb :challenge
 end
 
 post '/challenge' do
   @challenge = Challenge.find(params[:challenge_id])
-  @correct_answer = @challenge.table_name
+  @question = params[:question].to_sym
+  @correct_answer = @challenge.try(@question)
   @result = (@correct_answer == params[:answer])
   erb :result
 end
