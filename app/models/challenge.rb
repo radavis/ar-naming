@@ -40,6 +40,6 @@ class Challenge < ActiveRecord::Base
   end
 
   def correct?(method, submission)
-    try(method.to_sym) == submission
+    send(method.to_sym) == submission
   end
 end

@@ -28,7 +28,7 @@ end
 post '/challenge' do
   @challenge = Challenge.find(params[:challenge_id])
   @question = params[:question]
-  @correct_answer = @challenge.try(@question)
+  @correct_answer = @challenge.send(@question)
 
   @result = @challenge.correct?(params[:question], params[:submission])
   if @result
