@@ -38,4 +38,8 @@ class Challenge < ActiveRecord::Base
     [ :model_file_name, :table_name, :migration_name,
       :controller_name, :controller_file_name, :views_folder_name ]
   end
+
+  def correct?(method, submission)
+    try(method.to_sym) == submission
+  end
 end

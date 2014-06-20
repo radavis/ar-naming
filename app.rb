@@ -30,7 +30,7 @@ post '/challenge' do
   @question = params[:question]
   @correct_answer = @challenge.try(@question)
 
-  @result = (@correct_answer == params[:answer])
+  @result = @challenge.correct?(params[:question], params[:submission])
   if @result
     session[:right] += 1
   else

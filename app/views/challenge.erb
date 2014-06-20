@@ -4,8 +4,8 @@
   <p>Your Model is called '<%= @challenge.model %>'. What is the <%= @question.humanize %>?</p>
 
   <form action="/challenge" method="post">
-    <label for="answer">Answer:</label>
-    <input id="answer" type="text" name="answer" />
+    <label for="submission">Answer:</label>
+    <input id="submission" type="text" name="submission" />
 
     <input id="challenge_id" type="hidden" name="challenge_id" value="<%= @challenge.id %>" />
 

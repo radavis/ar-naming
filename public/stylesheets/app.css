@@ -1,6 +1,22 @@
+/* clearfix */
+
+.cf:before, .cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+
+/* page */
+
 body {
-  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
-  /* font-family: Monaco, Consolas, "Lucida Console", monospace; */
   font-family: Consolas, monaco, monospace;
   font-size: 3em;
 }
@@ -16,11 +32,49 @@ h1.right {
   background-color: green;
 }
 
+h1.link:hover {
+  background-color: black;
+}
+
 h1.wrong {
   background-color: red;
+}
+
+input {
+  font-size: 20px;
+  font-family: Consolas, monaco, monospace;
+  border: 1;
+  border-radius: 5px;
+  padding: 15px;
+  width: 470px;
+}
+
+p.right {
+  text-align: center;
+  background-color: green;
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+p.wrong {
+  text-align: center;
+  background-color: red;
+  display: block;
+  float: right;
+  width: 50%;
+}
+
+div.score {
+  margin-bottom: 50px;
 }
 
 div.container{
   margin-left: 5%;
   margin-right: 5%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

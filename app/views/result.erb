@@ -4,8 +4,11 @@
   <h1>Wrong! The correct answer was '<%= @correct_answer %>'</h1>
 <% end %>
 
-<h2>Score</h2>
-<p>Right: <%= session[:right] %></p>
-<p>Wrong: <%= session[:wrong] %></p>
+<div class="score cf">
+  <p class="right">Right: <%= session[:right] %></p>
+  <p class="wrong">Wrong: <%= session[:wrong] %></p>
+</div>
 
-<a href="/challenge">Try again?</a>
+<h1 class="link">
+  <a href="/challenge">Try again?</a>
+</h1>
