@@ -1,0 +1,26 @@
+body {
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  /* font-family: Monaco, Consolas, "Lucida Console", monospace; */
+  font-family: Consolas, monaco, monospace;
+  font-size: 3em;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  background-color: blue;
+  margin-top: 0;
+}
+
+h1.right {
+  background-color: green;
+}
+
+h1.wrong {
+  background-color: red;
+}
+
+div.container{
+  margin-left: 5%;
+  margin-right: 5%;
+}

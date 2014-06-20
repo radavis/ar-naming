@@ -1,12 +1,16 @@
-<p>Your Model is called '<%= @challenge.model %>'. What is the <%= @question.humanize %>?</p>
+<h1>Challenge</h1>
 
-<form action="/challenge" method="post">
-  <label for="answer">Answer:</label>
-  <input id="answer" type="text" name="answer" />
+<div class="container">
+  <p>Your Model is called '<%= @challenge.model %>'. What is the <%= @question.humanize %>?</p>
 
-  <input id="challenge_id" type="hidden" name="challenge_id" value="<%= @challenge.id %>" />
+  <form action="/challenge" method="post">
+    <label for="answer">Answer:</label>
+    <input id="answer" type="text" name="answer" />
 
-  <input id="question" type="hidden" name="question" value="<%= @question %>" />
+    <input id="challenge_id" type="hidden" name="challenge_id" value="<%= @challenge.id %>" />
 
-  <input type="submit" value="Submit" />
-</form>
+    <input id="question" type="hidden" name="question" value="<%= @question %>" />
+
+    <input type="submit" value="Submit" />
+  </form>
+</div>
