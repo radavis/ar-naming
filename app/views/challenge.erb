@@ -5,7 +5,7 @@
 
   <form action="/challenge" method="post">
     <label for="submission">Answer:</label>
-    <input id="submission" type="text" name="submission" />
+    <input id="submission" type="text" name="submission" required />
 
     <input id="challenge_id" type="hidden" name="challenge_id" value="<%= @challenge.id %>" />
 
