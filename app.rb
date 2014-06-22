@@ -56,7 +56,7 @@ get '/about' do
 end
 
 not_found do
-  erb :err
+  erb :dne
 end
 
 error do
