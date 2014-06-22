@@ -1,0 +1,17 @@
+<h1>Help</h1>
+
+<div class="help">
+  Model name: <%= @challenge.model_name %><br/>
+  <% Challenge.questions.each do |question| %>
+    <%= question.to_s.humanize %>:
+    <%= @challenge.send(question) %><br/>
+  <% end %>
+</div>
+
+<h1 class="link more_help">
+  <a href="http://guides.rubyonrails.org/active_record_basics.html#convention-over-configuration-in-active-record">MORE HELP</a>
+</h1>
+
+<h1 class="link">
+  <a href="/">START OVER?</a>
+</h1>

@@ -26,18 +26,27 @@ h1 {
   color: white;
   background-color: blue;
   margin-top: 0;
+  margin-bottom: 0.5ex;
 }
 
 h1.right {
   background-color: green;
 }
 
+h1.wrong {
+  background-color: red;
+}
+
 h1.link:hover {
   background-color: black;
 }
 
-h1.wrong {
-  background-color: red;
+h1.link {
+  margin-bottom: 0.25ex;
+}
+
+h1.more_help {
+  margin-top: 0.5ex;
 }
 
 input {
@@ -66,12 +75,16 @@ p.wrong {
 }
 
 div.score {
-  margin-bottom: 50px;
+  margin-bottom: 0.5ex;
 }
 
-div.container{
+div.container, div.help {
   margin-left: 5%;
   margin-right: 5%;
+}
+
+div.help {
+  font-size: 0.75em;
 }
 
 a {

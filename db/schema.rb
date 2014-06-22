@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 20140619195823) do
   enable_extension "plpgsql"
 
   create_table "challenges", force: true do |t|
-    t.string   "model_name", null: false
+    t.string   "model_name",                 null: false
+    t.boolean  "approved",   default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

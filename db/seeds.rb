@@ -23,5 +23,5 @@ model_names = [
 ]
 
 model_names.each do |model_name|
-  Challenge.find_or_create_by(model_name: model_name)
+  Challenge.find_or_create_by(model_name: model_name, approved: true)
 end

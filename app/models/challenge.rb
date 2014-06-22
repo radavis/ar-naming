@@ -42,4 +42,8 @@ class Challenge < ActiveRecord::Base
   def correct?(method, submission)
     send(method.to_sym) == submission
   end
+
+  def self.approved
+    where(approved: true)
+  end
 end

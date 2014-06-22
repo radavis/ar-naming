@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require 'pry'
 
 enable :sessions
 
@@ -19,7 +20,7 @@ get '/challenge' do
   session[:right] ||= 0
   session[:wrong] ||= 0
 
-  @challenge = Challenge.all.sample
+  @challenge = Challenge.approved.sample
   @question = Challenge.questions.sample.to_s
 
   erb :challenge
@@ -37,5 +38,27 @@ post '/challenge' do
     session[:wrong] += 1
   end
 
-  erb :result
+  erb :challenge_response
+end
+
+get '/help' do
+  erb :help
+end
+
+post '/help' do
+  params[:model_name] = params[:model_name].titleize.gsub(' ', '')
+  @challenge = Challenge.create(model_name: params[:model_name])
+  erb :help_response
+end
+
+get '/about' do
+  erb :about
+end
+
+not_found do
+  erb :err
+end
+
+error do
+  erb :err
 end
