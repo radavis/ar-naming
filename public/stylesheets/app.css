@@ -81,6 +81,7 @@ div.score {
 div.container, div.help {
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 1em;
 }
 
 div.help {
