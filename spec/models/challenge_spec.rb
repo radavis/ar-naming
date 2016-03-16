@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Challenge do
-  let(:challenge) { Challenge.create(model_name: 'GoatContainer') }
+  let(:challenge) { Challenge.create(subject: 'GoatContainer') }
 
   describe '#model' do
     it 'returns the capitalized, singular form of the model name' do

@@ -46,8 +46,8 @@ get '/help' do
 end
 
 post '/help' do
-  params[:model_name] = params[:model_name].titleize.gsub(' ', '')
-  @challenge = Challenge.create(model_name: params[:model_name])
+  params[:subject] = params[:subject].titleize.gsub(' ', '')
+  @challenge = Challenge.create(subject: params[:subject])
   erb :help_response
 end
 

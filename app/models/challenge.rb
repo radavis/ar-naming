@@ -1,8 +1,8 @@
 class Challenge < ActiveRecord::Base
-  validates_presence_of :model_name
+  validates :subject, presence: true
 
   def model
-    model_name.titleize
+    subject.titleize
   end
 
   def model_file_name
@@ -10,11 +10,11 @@ class Challenge < ActiveRecord::Base
   end
 
   def table_name
-    model_name.tableize
+    subject.tableize
   end
 
   def migration_name
-    "Create#{model_name.pluralize}"
+    "Create#{subject.pluralize}"
   end
 
   def migration_file_name
@@ -23,11 +23,11 @@ class Challenge < ActiveRecord::Base
   end
 
   def controller_name
-    "#{model_name.pluralize}Controller"
+    "#{subject.pluralize}Controller"
   end
 
   def controller_file_name
-    "#{model_name.tableize}_controller.rb"
+    "#{table_name}_controller.rb"
   end
 
   def views_folder_name
