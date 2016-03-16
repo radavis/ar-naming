@@ -1,4 +1,4 @@
-model_names = [
+subjects = [
   "Character",
   "TelevisionShow",
   "Actor",
@@ -22,6 +22,6 @@ model_names = [
   "Publication"
 ]
 
-model_names.each do |model_name|
-  Challenge.find_or_create_by(model_name: model_name, approved: true)
+subjects.each do |subject|
+  Challenge.find_or_create_by(subject: subject, approved: true)
 end

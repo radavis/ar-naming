@@ -1,7 +1,7 @@
 <h1>Help</h1>
 
 <div class="help">
-  Model name: <%= @challenge.model_name %><br/>
+  Model name: <%= @challenge.subject %><br/>
   <% Challenge.questions.each do |question| %>
     <%= question.to_s.humanize %>:
     <%= @challenge.send(question) %><br/>
